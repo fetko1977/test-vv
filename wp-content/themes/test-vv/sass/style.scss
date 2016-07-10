@@ -1,0 +1,120 @@
+/*********************************************************
+ *  All styles for screens smaller than 480px
+ *  Use mobile first approach!
+ *********************************************************/
+/*********************************************************
+ * IMPORT VARIABLES, FONTS AND MIXINS
+ *********************************************************/
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'animations';
+
+/*********************************************************
+ * CLASSES
+ *********************************************************/
+/* Bootstrap overrides */
+.row div {
+  margin: 0;
+  padding: 0;
+}
+
+.xs-margin {
+  margin: 0 10px;
+}
+
+/*********************************************************
+ * GLOBAL 
+ *********************************************************/
+h1,h2,h3,h4,h5,h6,p,a,li,span,dt,dd,label,input,strong,em,td,th {
+  font-family:'Roboto', sans-serif, Arial, Helvetica;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* VIEWPORT FIXES (http://timkadlec.com/2013/01/windows-phone-8-and-device-width/) */
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+/*********************************************************
+ * HEADER
+ *********************************************************/
+
+
+/*********************************************************
+ * MAIN
+ *********************************************************/
+div[role="main"] {
+    div.container {
+        div.row {
+            
+        }
+    }
+}
+
+/*********************************************************
+ * FOOTER
+ *********************************************************/
+
+ 
+/*********************************************************
+ * MEDIA QUERIES
+ *********************************************************/
+// 30em (480px)
+@media only screen and (min-width : 30em) {
+  @import 'mq/30em';
+}
+
+// 48em (768px)
+@media only screen and (min-width : 48em) {
+  @import 'mq/48em';
+}
+
+// 62em (992px)
+@media only screen and (min-width : 62em) {
+  @import 'mq/62em';
+}
+
+// 75em (1312px)
+@media only screen and (min-width : 75em) {
+  @import 'mq/75em';
+}
+
+// 82em (1312px)
+@media only screen and (min-width : 82em) {
+  @import 'mq/82em';
+}
+
+/***********************************
+ * RETINA
+ ***********************************/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  header.header {
+    .navbar {
+      .navbar-header {
+        a.navbar-brand {
+          h1 {
+            
+          }
+        }
+      }
+    }
+  }
+}
+
